@@ -1,0 +1,12 @@
+# Site settings
+title: Operations Portal
+email: captain@pinnaclemobileapp.com
+description: > # Portal containing information on running containers  "baseurl:"
+ Portal containing information on running containers.
+baseurl: "" # the subpath of your site, e.g. /blog/
+url: "http://pinnaclemobileapp.com" # the base hostname & protocol for your site
+twitter_username: 
+github_username:  
+
+# Build settings
+markdown: kramdown

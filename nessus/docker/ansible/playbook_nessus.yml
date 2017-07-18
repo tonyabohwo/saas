@@ -1,0 +1,56 @@
+
+---
+- hosts: web
+  tasks:
+  - name: Install libraries
+    shell: yum install glibc zlib
+    register: libraries_output
+    sudo: yes
+
+  - name: what got registered
+    debug: var=libraries_output
+
+  - name: return code
+    debug: msg="return code was {{ libraries_output['rc'] }}"
+    
+ 
+  - name: Download nessus
+    shell: wget https://s3.amazonaws.com/bionicpulse/Nessus-6.4.3-es7.x86_64.rpm
+    register: download_output
+    sudo: yes
+
+  - name: what got registered
+    debug: var=download_output
+
+  - name: return code
+    debug: msg="return code was {{ download_output['rc'] }}"
+
+  - name: Install Nessus
+    shell: rpm -ivh Nessus-6.4.3-es7.x86_64.rpm
+    register: Nessus_output
+    sudo: yes
+
+  - name: what got registered
+    debug: var=Nessus_output
+
+  - name: return code
+    debug: msg="return code was {{ Nessus_output['rc'] }}"
+
+  - name: nessusd start
+    command: service nessusd start
+    register: start_output
+    sudo: yes
+
+  - name: what got registered
+    debug: var=start_output
+
+  - name: return code
+    debug: msg="return code was {{ start_output['rc'] }}"
+
+
+
+
+
+
+
+

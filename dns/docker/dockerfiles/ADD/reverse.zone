@@ -1,0 +1,349 @@
+$TTL 1D
+@ IN SOA dns.bionic.labs. root.dns.bionic.labs. (
+                                        0       ; serial
+                                        1D      ; refresh
+                                        1H      ; retry
+                                        1W      ; expire
+                                        3H )    ; minimum
+            IN NS   dns.bionic.labs.
+2           IN PTR  dns.bionic.labs.
+2			      IN PTR  goliath.bionic.labs.
+2			      IN PTR  registry.bionic.labs.
+6           IN PTR  router-1.bionic.labs.
+20			    IN PTR  prod.bionic.labs.
+20			    IN PTR  jira.bionic.labs.
+20			    IN PTR  confluence.bionic.labs.
+20			    IN PTR  jabber.bionic.labs.
+20			    IN PTR  jekyll.bionic.labs.
+20			    IN PTR  jenkins.bionic.labs.
+20		      IN PTR  owncloud.bionic.labs.
+61	        IN PTR  ghost.bionic.labs.
+100			    IN PTR  brucelee.bionic.labs.
+102			    IN PTR  prodmini.bionic.labs.
+151			    IN PTR  synology-1.bionic.labs.
+152			    IN PTR  synology-1.bionic.labs.
+153			    IN PTR  synology-1.bionic.labs.
+154			    IN PTR  synology-1.bionic.labs.
+161			    IN PTR  synology-2.bionic.labs.
+162			    IN PTR  synology-2.bionic.labs.
+163			    IN PTR  synology-2.bionic.labs.
+164			    IN PTR  synology-2.bionic.labs.
+
+
+2.3.0       IN PTR puppet-daas.bionic.labs.
+3.3.0       IN PTR greenplum-daas.bionic.labs.
+4.3.0       IN PTR hadoop-daas.bionic.labs.
+5.3.0       IN PTR oozie-daas.bionic.labs.
+6.3.0       IN PTR pig-daas.bionic.labs.
+7.3.0       IN PTR hive-daas.bionic.labs.
+8.3.0       IN PTR presto-daas.bionic.labs.
+9.3.0      IN PTR vertica-daas.bionic.labs.
+10.3.0      IN PTR hortonworks-daas.bionic.labs.
+11.3.0      IN PTR cloudera-daas.bionic.labs.
+12.3.0      IN PTR kylin-daas.bionic.labs.
+30.3.0      IN PTR cassandra-1-daas.bionic.labs.
+31.3.0      IN PTR cassandra-2-daas.bionic.labs.
+32.3.0      IN PTR cassandra-3-daas.bionic.labs.
+33.3.0      IN PTR cassandra-4-daas.bionic.labs.
+34.3.0      IN PTR cassandra-5-daas.bionic.labs.
+35.3.0      IN PTR cassandra-6-daas.bionic.labs.
+36.3.0      IN PTR cassandra-7-daas.bionic.labs.
+37.3.0      IN PTR cassandra-8-daas.bionic.labs.
+38.3.0      IN PTR cassandra-9-daas.bionic.labs.
+39.3.0      IN PTR cassandra-10-daas.bionic.labs.
+
+2.5.0       IN PTR puppet-caas.bionic.labs.
+4.5.0       IN PTR dtr-caas.bionic.labs.
+5.5.0       IN PTR ucp-caas.bionic.labs.
+6.5.0       IN PTR registry-caas.bionic.labs.
+50.5.0      IN PTR consul-1-caas.bionic.labs.
+51.5.0      IN PTR consul-2-caas.bionic.labs.
+52.5.0      IN PTR consul-3-caas.bionic.labs.
+70.5.0      IN PTR kubernetes-1-caas.bionic.labs.
+71.5.0      IN PTR kubernetes-2-caas.bionic.labs.
+72.5.0      IN PTR kubernetes-3-caas.bionic.labs.
+90.5.0      IN PTR dcos-1-caas.bionic.labs.
+91.5.0      IN PTR dcos-2-caas.bionic.labs.
+92.5.0      IN PTR dcos-3-caas.bionic.labs.
+93.5.0      IN PTR dcos-4-caas.bionic.labs.
+100.5.0     IN PTR coreos-1-caas.bionic.labs.
+100.5.0     IN PTR quay-caas.bionic.labs.
+101.5.0     IN PTR coreos-2-caas.bionic.labs.
+101.5.0     IN PTR clair-caas.bionic.labs.
+102.5.0     IN PTR coreos-3-caas.bionic.labs.
+
+
+2.6.0       IN PTR puppet-ciaas.bionic.labs.
+3.6.0       IN PTR artifactory-ciaas.bionic.labs.
+4.6.0       IN PTR sonatype-nexus-ciaas.bionic.labs.
+5.6.0       IN PTR electriccloud-ciaas.bionic.labs.
+6.6.0       IN PTR hubot-ciaas.bionic.labs.
+7.6.0       IN PTR hipchat-ciaas.bionic.labs.
+8.6.0       IN PTR selenium-ciaas.bionic.labs.
+9.6.0       IN PTR watir-ciaas.bionic.labs.
+10.6.0      IN PTR capybara-ciaas.bionic.labs.
+11.6.0      IN PTR jenkkins-1-ciaas.bionic.labs.
+12.6.0      IN PTR openfire-ciaas.bionic.labs.
+13.6.0      IN PTR ejabberd-ciaas.bionic.labs.
+14.6.0      IN PTR prosody-ciaas.bionic.labs.
+15.6.0      IN PTR sonarqube-ciaas.bionic.labs.
+
+
+2.7.0       IN PTR puppet-daas.bionic.labs.
+5.7.0       IN PTR mariadb-1-daas.bionic.labs.
+6.7.0       IN PTR mariadb-2-daas.bionic.labs.
+7.7.0       IN PTR mariadb-3-daas.bionic.labs.
+10.7.0       IN PTR influxdb-1-daas.bionic.labs.
+11.7.0       IN PTR influxdb-2-daas.bionic.labs.
+12.7.0       IN PTR influxdb-3-daas.bionic.labs.
+15.7.0       IN PTR mongodb-1-daas.bionic.labs.
+16.7.0       IN PTR mongodb-2-daas.bionic.labs.
+17.7.0       IN PTR mongodb-3-daas.bionic.labs.
+20.7.0       IN PTR rethinkdb-1-daas.bionic.labs.
+21.7.0       IN PTR rethinkdb-2-daas.bionic.labs.
+22.7.0       IN PTR rethinkdb-3-daas.bionic.labs.
+25.7.0       IN PTR couchdb-1-daas.bionic.labs.
+26.7.0       IN PTR couchdb-2-daas.bionic.labs.
+27.7.0       IN PTR couchdb-3-daas.bionic.labs.
+30.7.0       IN PTR cloudantdb-1-daas.bionic.labs.
+31.7.0       IN PTR cloudantdb-2-daas.bionic.labs.
+32.7.0       IN PTR cloudantdb-3-daas.bionic.labs.
+35.7.0       IN PTR elasticsearchdb-1-daas.bionic.labs.
+36.7.0       IN PTR elasticsearchdb-2-daas.bionic.labs.
+37.7.0       IN PTR elasticsearchdb-3-daas.bionic.labs.
+40.7.0      IN PTR mysqldb-1-daas.bionic.labs.
+41.7.0      IN PTR mysqldb-2-daas.bionic.labs.
+42.7.0      IN PTR mysqldb-3-daas.bionic.labs.
+45.7.0      IN PTR postgresdb-1-daas.bionic.labs.
+46.7.0      IN PTR postgresdb-2-daas.bionic.labs.
+47.7.0      IN PTR postgresdb-3-daas.bionic.labs.
+50.7.0      IN PTR redisdb-1-daas.bionic.labs.
+51.7.0      IN PTR redisdb-2-daas.bionic.labs.
+52.7.0      IN PTR redisdb-3-daas.bionic.labs.
+55.7.0      IN PTR etcddb-1-daas.bionic.labs.
+56.7.0      IN PTR etcddb-2-daas.bionic.labs.
+57.7.0      IN PTR etcddb-3-daas.bionic.labs.
+60.7.0      IN PTR couchbasedb-1-daas.bionic.labs.
+61.7.0      IN PTR couchbasedb-2-daas.bionic.labs.
+62.7.0      IN PTR couchbasedb-3-daas.bionic.labs.
+65.7.0      IN PTR zookeeperdb-1-daas.bionic.labs.
+66.7.0      IN PTR zookeeperdb-2-daas.bionic.labs.
+67.7.0      IN PTR zookeeperdb-3-daas.bionic.labs.
+81.7.0      IN PTR sqlitedb-daas.bionic.labs.
+82.7.0      IN PTR hbase-daas.bionic.labs.
+83.7.0      IN PTR percona-mysqldb-daas.bionic.labs.
+84.7.0      IN PTR percona-postgresdb-daas.bionic.labs.
+85.7.0      IN PTR percona-mongodb-daas.bionic.labs.
+86.7.0      IN PTR elephantsqldb-daas.bionic.labs.
+87.7.0      IN PTR firebirddb-daas.bionic.labs.
+88.7.0      IN PTR opentsdb-daas.bionic.labs.
+
+
+2.8.0       IN PTR puppet-lang.bionic.labs.
+3.8.0       IN PTR meteor-lang.bionic.labs.
+4.8.0       IN PTR php-lang.bionic.labs.
+5.8.0       IN PTR nodejs-lang.bionic.labs.
+6.8.0       IN PTR ruby-lang.bionic.labs.
+7.8.0       IN PTR java-lang.bionic.labs.
+8.8.0       IN PTR python-lang.bionic.labs.
+9.8.0      IN PTR erlang-lang.bionic.labs.
+10.8.0      IN PTR go-lang.bionic.labs.
+
+2.9.0       IN PTR puppet-iaas.bionic.labs.
+3.9.0       IN PTR dhcq-iaas.bionic.labs.
+4.9.0       IN PTR rdo-iaas.bionic.labs.
+5.9.0       IN PTR mirantis-iaas.bionic.labs.
+6.9.0       IN PTR cloudforms-iaas.bionic.labs.
+7.9.0       IN PTR ldap-iaas.bionic.labs.
+8.9.0       IN PTR openvpn-iaas.bionic.labs.
+9.9.0       IN PTR rancid-iaas.bionic.labs.
+10.9.0      IN PTR varnish-iaas.bionic.labs.
+
+
+82.7.0       IN PTR puppet-iot.bionic.labs.
+83.7.0       IN PTR tensorflow-iot.bionic.labs.
+84.7.0       IN PTR spark-iot.bionic.labs.
+85.7.0       IN PTR druid-iot.bionic.labs.
+86.7.0       IN PTR drill-iot.bionic.labs.
+88.7.0       IN PTR impala-iot.bionic.labs.
+89.7.0       IN PTR neo4j-iot.bionic.labs.
+90.7.0      IN PTR pipelinedb-iot.bionic.labs.
+91.7.0      IN PTR crateio-iot.bionic.labs.
+92.7.0      IN PTR cockroachdb-iot.bionic.labs.
+94.7.0      IN PTR confluent-iot.bionic.labs.
+95.7.0      IN PTR firebase-iot.bionic.labs.
+96.7.0      IN PTR anaconda-iot.bionic.labs.
+
+
+2.11.0       IN PTR puppet-os.bionic.labs.
+3.11.0       IN PTR centos67-os.bionic.labs.
+4.11.0       IN PTR centos72-os.bionic.labs.
+5.11.0       IN PTR coreos-os.bionic.labs.
+6.11.0       IN PTR atomic-os.bionic.labs.
+7.11.0       IN PTR rhel67-os.bionic.labs.
+8.11.0       IN PTR rhel71-os.bionic.labs.
+
+
+2.12.0       IN PTR puppet-maas.bionic.labs.
+3.12.0       IN PTR splunk-maas.bionic.labs.
+4.12.0       IN PTR fluentd-maas.bionic.labs.
+5.12.0       IN PTR graylog-maas.bionic.labs.
+6.12.0       IN PTR nagiosxi-1-maas.bionic.labs.
+7.12.0       IN PTR logstash-maas.bionic.labs.
+8.12.0       IN PTR sensu-maas.bionic.labs.
+9.12.0       IN PTR prometheus-maas.bionic.labs.
+10.12.0      IN PTR zabbix-1-maas.bionic.labs.
+11.12.0      IN PTR zenoss-maas.bionic.labs.
+13.12.0      IN PTR riemann-maas.bionic.labs.
+14.12.0      IN PTR smokeping-maas.bionic.labs.
+15.12.0      IN PTR rsyslog-maas.bionic.labs.
+16.12.0      IN PTR sysdig-maas.bionic.labs.
+17.12.0      IN PTR logio-maas.bionic.labs.
+18.12.0      IN PTR flapjack-maas.bionic.labs.
+19.12.0      IN PTR nagiosxi-2-maas.bionic.labs.
+20.12.0      IN PTR zabbix-2-maas.bionic.labs.
+21.12.0      IN PTR heapster-1-maas.bionic.labs.
+22.12.0      IN PTR heapster-2-maas.bionic.labs.
+
+2.13.0       IN PTR puppet-paas.bionic.labs.
+3.13.0       IN PTR cloudfoundry-paas.bionic.labs.
+4.13.0       IN PTR openshift-master-paas.bionic.labs.
+5.13.0       IN PTR openshift-node-1-paas.bionic.labs.
+6.13.0       IN PTR openshift-node-2-paas.bionic.labs.
+7.13.0       IN PTR openshift-node-3-paas.bionic.labs.
+8.13.0       IN PTR deis-paas.bionic.labs.
+
+2.14.0       IN PTR puppet-queue.bionic.labs.
+3.14.0       IN PTR rabbitmq-1-queue.bionic.labs.
+4.14.0       IN PTR rabbitmq-2-queue.bionic.labs.
+5.14.0       IN PTR rabbitmq-3-queue.bionic.labs.
+6.14.0       IN PTR active-1-queue.bionic.labs.
+7.14.0       IN PTR active-2-queue.bionic.labs.
+8.14.0       IN PTR active-3-queue.bionic.labs.
+9.14.0       IN PTR kafka-1-queue.bionic.labs.
+10.14.0      IN PTR kafka-2-queue.bionic.labs.
+11.14.0      IN PTR kafka-3-queue.bionic.labs.
+
+
+102.3.0       IN PTR puppet-secaas.bionic.labs.
+103.3.0       IN PTR blackarch-secaas.bionic.labs.
+104.3.0       IN PTR nessus-secaas.bionic.labs.
+105.3.0       IN PTR snort-secaas.bionic.labs.
+106.3.0       IN PTR kali-secaas.bionic.labs.
+107.3.0       IN PTR securityonion-secaas.bionic.labs.
+108.3.0       IN PTR owasp-secaas.bionic.labs.
+109.3.0       IN PTR beef-secaas.bionic.labs.
+110.3.0      IN PTR unhide-secaas.bionic.labs.
+111.3.0      IN PTR metasploit-secaas.bionic.labs.
+112.3.0      IN PTR openvas-secaas.bionic.labs.
+113.3.0      IN PTR fail2ban-secaas.bionic.labs.
+114.3.0      IN PTR backbox-secaas.bionic.labs.
+115.3.0      IN PTR nmap-secaas.bionic.labs.
+; dirb -  URL Bruteforcer: DIRB is a Web Content Scanner - https://sourceforge.net/projects/dirb/files/dirb/2.22/dirb222.tar.gz/download
+; Patator – Multi-threaded Service & URL Brute Forcing Tool - http://www.darknet.org.uk/2015/06/patator-multi-threaded-service-url-brute-forcing-tool/
+; dirs3arch – HTTP File & Directory Brute Forcing Tool - http://www.darknet.org.uk/2014/07/dirs3arch-http-file-directory-brute-forcing-tool/
+;
+;
+;
+
+102.4.0       IN PTR puppet-ui.bionic.labs.
+103.4.0       IN PTR kibana-ui.bionic.labs.
+104.4.0       IN PTR grafana-ui.bionic.labs.
+106.4.0       IN PTR d3js-ui.bionic.labs.
+107.4.0       IN PTR kubedash-ui.bionic.labs.
+108.4.0       IN PTR chronograf.bionic.labs.
+
+
+102.5.0       IN PTR puppet-saas.bionic.labs.
+103.5.0       IN PTR mailscanner-saas.bionic.labs.
+104.5.0       IN PTR scrolloutf1-saas.bionic.labs.
+105.5.0       IN PTR ciphermail-saas.bionic.labs.
+106.5.0       IN PTR apache-saas.bionic.labs.
+107.5.0       IN PTR nginx-saas.bionic.labs.
+108.5.0       IN PTR tomcat-saas.bionic.labs.
+109.5.0       IN PTR jboss-saas.bionic.labs.
+110.5.0      IN PTR haproxy-saas.bionic.labs.
+111.5.0      IN PTR vsftpd-saas.bionic.labs.
+112.5.0      IN PTR postfix-saas.bionic.labs.
+113.5.0      IN PTR hystrix-saas.bionic.labs.
+114.5.0      IN PTR nats-saas.bionic.labs.
+115.5.0      IN PTR thrift-saas.bionic.labs.
+116.5.0      IN PTR grpc-saas.bionic.labs.
+117.5.0      IN PTR finagle-saas.bionic.labs.
+
+
+102.6.0       IN PTR puppet-devops.bionic.labs.
+103.6.0       IN PTR ansibletower-devops.bionic.labs.
+104.6.0       IN PTR pxe-devops.bionic.labs.
+105.6.0       IN PTR tftp-devops.bionic.labs.
+106.6.0       IN PTR cobbler-devops.bionic.labs.
+
+102.7.0       IN PTR puppet-staas.bionic.labs.
+103.7.0       IN PTR riak-staas.bionic.labs.
+104.7.0       IN PTR glusterfs-staas.bionic.labs.
+105.7.0       IN PTR flocker-staas.bionic.labs.
+106.7.0       IN PTR ceph-staas.bionic.labs.
+107.7.0       IN PTR minio.bionic-staas.labs.
+108.7.0       IN PTR portworx-staas.bionic.labs.
+109.7.0       IN PTR datawise-staas.bionic.labs.
+
+
+102.8.0       IN PTR puppet-naas.bionic.labs.
+103.8.0       IN PTR weaveworks-naas.bionic.labs.
+104.8.0       IN PTR openswitch-naas.bionic.labs.
+105.8.0       IN PTR calico-naas.bionic.labs.
+106.8.0       IN PTR cumulus-naas.bionic.labs.
+107.8.0       IN PTR rancid-naas.bionic.labs.
+108.8.0       IN PTR datawire-naas.bionic.labs.
+109.8.0       IN PTR traefik-naas.bionic.labs.
+
+
+102.9.0       IN PTR puppet-coreos.bionic.labs.
+103.9.0       IN PTR core-1-coreos.bionic.labs.
+104.9.0       IN PTR core-2-coreos.bionic.labs.
+105.9.0       IN PTR core-3-coreos.bionic.labs.
+106.9.0       IN PTR core-4-coreos.bionic.labs.
+107.9.0       IN PTR core-5-coreos.bionic.labs.
+108.9.0       IN PTR core-6-coreos.bionic.labs.
+109.9.0       IN PTR core-7-coreos.bionic.labs.
+110.9.0      IN PTR core-8-coreos.bionic.labs.
+111.9.0      IN PTR core-9-coreos.bionic.labs.
+112.9.0      IN PTR core-10-coreos.bionic.labs.
+
+102.10.0      IN PTR puppet-corp.bionic.labs.
+103.10.0      IN PTR dns-1-corp.bionic.labs.
+104.10.0      IN PTR dns-2-corp.bionic.labs.
+105.10.0      IN PTR squid-1-corp.bionic.labs.
+106.10.0      IN PTR squid-2-corp.bionic.labs.
+107.10.0      IN PTR ntp-1-corp.bionic.labs.
+108.10.0      IN PTR ntp-2-corp.bionic.labs.
+109.10.0      IN PTR jenkins-1-corp.bionic.labs.
+110.10.0      IN PTR jenkins-2-corp.bionic.labs.
+111.10.0      IN PTR owncloud-1-corp.bionic.labs.
+112.10.0      IN PTR owncloud-2-corp.bionic.labs.
+113.10.0      IN PTR mattermost-1-corp.bionic.labs.
+114.10.0      IN PTR mattermost-2-corp.bionic.labs.
+115.10.0      IN PTR jira-1-corp.bionic.labs.
+116.10.0      IN PTR jira-2-corp.bionic.labs.
+117.10.0      IN PTR confluence-1-corp.bionic.labs.
+118.10.0      IN PTR confluence-2-corp.bionic.labs.
+119.10.0      IN PTR gitlab-corp.bionic.labs.
+120.10.0      IN PTR stash-corp.bionic.labs.
+121.10.0      IN PTR swagger-corp.bionic.labs.
+
+102.11.0       IN PTR puppet-blockchain.bionic.labs.
+103.11.0       IN PTR multichain-blockchain.bionic.labs.
+104.11.0       IN PTR openchain-blockchain.bionic.labs.
+105.11.0       IN PTR blockstack-blockchain.bionic.labs.
+106.11.0       IN PTR myblockchain-blockchain.bionic.labs.
+
+102.12.0      IN PTR puppet-irc.bionic.labs.
+103.12.0      IN PTR shourt-irc.bionic.labs.
+
+102.14.0      IN PTR puppet-third-party.bionic.labs.
+; pagerduty-third-party.bionic.labs.
+; new relic
+; loggly
+; logentries
+; new relic
+; datadog

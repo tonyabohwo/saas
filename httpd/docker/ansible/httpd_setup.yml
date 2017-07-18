@@ -1,0 +1,15 @@
+---
+- hosts: rackspace
+  tasks:
+  - name: Install httpd
+    shell: yum install httpd -y
+    sudo: yes
+    
+  - name: Start httpd
+    shell: sudo service httpd start
+    sudo: yes
+    
+  - name: Check httpd status
+    shell: sudo service httpd start
+    sudo: yes
+    

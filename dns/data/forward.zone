@@ -1,0 +1,614 @@
+$ORIGIN bionic.labs.
+$TTL 1D
+@ IN SOA dns.bionic.labs. root.dns.bionic.labs. (
+                                        0       ; serial
+                                        1D      ; refresh
+                                        1H      ; retry
+                                        1W      ; expire
+                                        3H )    ; minimum
+	                IN NS       dns.bionic.labs.
+dns    	            IN A        10.0.1.2
+goliath    	        IN A        10.0.1.2
+registry            IN CNAME    goliath
+dev	                IN CNAME    goliath
+router    	        IN CNAME    10.0.1.6
+bond13    	        IN CNAME    10.0.1.13
+bond14    	        IN CNAME    10.0.1.14
+bond15    	        IN CNAME    10.0.1.15
+prod    	        IN A        10.0.1.20
+confluence          IN CNAME    prod
+jabber    	        IN CNAME    prod
+jekyll    	        IN CNAME    prod
+jenkins    	        IN CNAME    prod
+jira    	        IN CNAME    prod
+owncloud            IN CNAME    prod
+
+ghost               IN A        10.0.1.61
+brood    	        IN CNAME    ghost
+brucelee            IN A        10.0.1.100
+magnificent         IN A        10.0.1.101
+prodmini            IN A        10.0.1.102
+
+synology-1          IN A        10.0.1.151
+synology-1          IN A        10.0.1.152
+synology-1          IN A        10.0.1.153
+synology-1          IN A        10.0.1.154
+synology-2          IN A        10.0.1.161
+synology-2          IN A        10.0.1.162
+synology-2          IN A        10.0.1.163
+; synology-2          IN A        10.0.1.164
+
+puppet-caas                 IN A        10.0.5.2
+dtr-caas              IN A        10.0.5.4
+ucp-caas              IN A        10.0.5.5
+registry-caas               IN A        10.0.5.6
+consul-caas                 IN A        10.0.5.50
+consul-caas                 IN A        10.0.5.51
+consul-caas                 IN A        10.0.5.52
+consul-1-caas               IN A        10.0.5.50
+consul-2-caas               IN A        10.0.5.51
+consul-3-caas               IN A        10.0.5.52
+kubernetes-1-caas           IN A        10.0.5.70
+kubernetes-2-caas           IN A        10.0.5.71
+kubernetes-3-caas           IN A        10.0.5.72
+dcos-1-caas                 IN A        10.0.5.90
+dcos-2-caas                 IN A        10.0.5.91
+dcos-3-caas                 IN A        10.0.5.92
+coreos-1-caas               IN A        10.0.5.100
+quay-caas                   IN A        10.0.5.100
+coreos-2-caas               IN A        10.0.5.101
+clair-caas                  IN A        10.0.5.101
+coreos-3-caas               IN A        10.0.5.102
+; https://www.kontena.io/pricing
+; weave
+; skydns
+; discoverd
+; confd
+; fleetctl
+; swarm  orchestration
+; chronos
+; mantl http://blogs.cisco.com/cloud/stateful-applications-on-mantl-using-the-mesos-elk-framework
+;       https://drive.google.com/file/d/0BzQWA4qT6GG1VGhIMnhrcWQ0dmM/view?usp=sharinghttps://drive.google.com/file/d/0BzQWA4qT6GG1VGhIMnhrcWQ0dmM/view?usp=sharing
+;       http://blogs.cisco.com/cloud
+;       https://getcarina.com - carina
+;       https://www.joyent.com -triton
+;       https://www.tutum.co - tutum
+;       universal control plane https://www.docker.com/products/docker-universal-control-plane
+; aurora http://aurora.apache.org/documentation/latest/
+; Serf - https://github.com/hashicorp/serf
+; Drone - https://github.com/drone/drone
+; Shipyard - https://github.com/shipyard/shipyard
+; Kubernetes - https://github.com/GoogleCloudPlatform/kubernetes
+; Panamax - https://github.com/centurylinklabs/panamax-ui
+; grpc - A high performance, open source, general RPC framework that puts mobile and HTTP/2 first.
+;   http://www.grpc.io
+;   https://github.com/gengo/grpc-gateway
+; scope Weave Scope provides a visual map of your Docker containers, so you can intuitively understand, monitor, and control your applications.
+;   https://www.weave.works/products/weave-scope/
+; Docker Datacenter
+;   Docker Datacenter is an integrated solution including open source and commercial software, the integrations between them, full Docker API support, validated configurations and commercial support for your Docker Datacenter environment
+;   http://www.docker.com/pricing
+; aws ec2 container service
+;   orchestration
+; eureka
+;   https://github.com/Netflix/eureka/wiki/Eureka-at-a-glance
+; prana
+;   https://github.com/Netflix/Prana
+; Magnum - Containers-as-a-Service for OpenStack
+;   Magnum - Containers-as-a-Service for OpenStack
+; Kolla provides production-ready containers and deployment tools for operating OpenStack clouds that are scalable, fast, reliable, and upgradable using community best practices
+;   https://wiki.openstack.org/wiki/Kolla
+; Cisco DevNet
+;   https://developer.cisco.com/site/shipped/
+; Mantl - A container orchestrator, docker, a network stack, something to pool your logs, something to monitor health, a sprinkle of service discovery and some automation. Sound familiar?
+;   https://mantl.io
+; Policy backed Clustered Storage (via Ceph) for Docker http://docs.contiv.io
+;   https://github.com/contiv/volplugin
+;
+; http://storageos.com/features/
+;
+;
+;
+
+
+
+puppet-ciaas              IN A        10.0.6.2
+artifactory-ciaas         IN A        10.0.6.3
+sonatype-nexus-ciaas      IN A        10.0.6.4
+electriccloud-ciaas       IN A        10.0.6.5
+hubot-ciaas               IN A        10.0.6.6
+hipchat-ciaas             IN A        10.0.6.7
+selenium-ciaas            IN A        10.0.6.8
+watir-ciaas               IN A        10.0.6.9
+capybara-ciaas            IN A        10.0.6.10
+openfire-ciaas            IN A        10.0.6.12
+ejabberd-ciaas            IN A        10.0.6.13
+prosody-ciaas             IN A        10.0.6.14
+sonarqube-ciaas           IN A        10.0.6.15
+; concourse-ci  Concourse CI
+; http://www.bazel.io/docs/skyframe.html
+;http://www.scalr.com/product.html
+; codeship https://codeship.com/pricing
+; circleci
+; travisci
+; yahoo cloud serving benchmark, https://labs.yahoo.com/news/yahoo-cloud-serving-benchmark/
+; mocha test framework for nodejs
+; Nulecule defines a pattern and model for packaging complex multi-container applications, referencing all their dependencies
+;	http://www.projectatomic.io/docs/nulecule/
+; Libretto is a Golang library to create Virtual Machines (VMs) on any cloud and Virtual Machine hosting platforms such as AWS, Azure, OpenStack, vSphere, or VirtualBox.
+; https://github.com/apcera/libretto
+; Velocity Deliver modern applications in containers with scalable and reliable continuous delivery for all your teams.
+;   https://mesosphere.com/velocity/
+; Protect your web app now! Three-command install, get back to your code
+;   https://www.sqreen.io
+
+
+
+puppet-daas                   IN A        10.0.7.2
+mariadb-1-daas                IN A        10.0.7.5
+mariadb-2-daas                IN A        10.0.7.6
+mariadb-3-daas                IN A        10.0.7.7
+influxdb-daas                 IN A        10.0.7.10
+influxdb-daas                 IN A        10.0.7.11
+influxdb-daas                 IN A        10.0.7.12
+influxdb-1-daas               IN A        10.0.7.10
+influxdb-2-daas               IN A        10.0.7.11
+influxdb-3-daas               IN A        10.0.7.12
+mongodb-1-daas                IN A        10.0.7.15
+mongodb-2-daas                IN A        10.0.7.16
+mongodb-3-daas                IN A        10.0.7.17
+mongodb-daas                  IN A        10.0.7.15
+mongodb-daas                  IN A        10.0.7.16
+mongodb-daas                  IN A        10.0.7.17
+rethinkdb-1-daas              IN A        10.0.7.20
+rethinkdb-2-daas              IN A        10.0.7.21
+rethinkdb-3-daas              IN A        10.0.7.22
+couchdb-1-daas                IN A        10.0.7.25
+couchdb-2-daas                IN A        10.0.7.26
+couchdb-3-daas                IN A        10.0.7.27
+cloudantdb-1-daas             IN A        10.0.7.30
+cloudantdb-2-daas             IN A        10.0.7.31
+cloudantdb-3-daas             IN A        10.0.7.32
+elasticsearchdb-daas          IN A        10.0.7.35   ;this should be a load balancer that round robins the 3 boxes
+elasticsearchdb-daas          IN A        10.0.7.36   ;this should be a load balancer that round robins the 3 boxes
+elasticsearchdb-daas          IN A        10.0.7.37   ;this should be a load balancer that round robins the 3 boxes
+elasticsearchdb-1-daas        IN A        10.0.7.35
+elasticsearchdb-2-daas        IN A        10.0.7.36
+elasticsearchdb-3-daas        IN A        10.0.7.37
+mysqldb-1-daas                IN A        10.0.7.40
+mysqldb-2-daas                IN A        10.0.7.41
+mysqldb-3-daas                IN A        10.0.7.42
+postgresdb-1-daas             IN A        10.0.7.45
+postgresdb-2-daas             IN A        10.0.7.46
+postgresdb-3-daas             IN A        10.0.7.47
+redisdb-1-daas                IN A        10.0.7.50
+redisdb-2-daas                IN A        10.0.7.51
+redisdb-3-daas                IN A        10.0.7.52
+etcddb-1-daas                 IN A        10.0.7.55
+etcddb-2-daas                 IN A        10.0.7.56
+etcddb-3-daas                 IN A        10.0.7.57
+couchbasedb-1-daas            IN A        10.0.7.60
+couchbasedb-2-daas            IN A        10.0.7.61
+couchbasedb-3-daas            IN A        10.0.7.62
+zookeeperdb-1-daas            IN A        10.0.7.65
+zookeeperdb-2-daas            IN A        10.0.7.66
+zookeeperdb-3-daas            IN A        10.0.7.67
+sqlitedb-daas                 IN A        10.0.7.81
+hbase-daas                    IN A        10.0.7.82
+cassandra-daas         IN A          10.0.7.90
+cassandra-daas         IN A          10.0.7.91
+cassandra-daas         IN A          10.0.7.92
+cassandra-daas         IN A          10.0.7.93
+cassandra-daas         IN A          10.0.7.94
+cassandra-daas         IN A          10.0.7.95
+cassandra-1-daas         IN A        10.0.7.90
+cassandra-2-daas         IN A        10.0.7.91
+cassandra-3-daas         IN A        10.0.7.92
+cassandra-4-daas         IN A        10.0.7.93
+cassandra-5-daas         IN A        10.0.7.94
+cassandra-6-daas         IN A        10.0.7.95
+
+;memsql http://www.memsql.com/?gclid=CKqqw5f0vM0CFZFufgodeJQEAA
+;percona-mysqldb-daas          IN A        10.0.7.83   ;https://www.percona.com/downloads/
+;percona-postgresdb-daas       IN A        10.0.7.84   ;https://www.percona.com/downloads/
+;percona-mongodb-daas          IN A        10.0.7.85   ;https://www.percona.com/software/mongo-database/percona-server-for-mongodb
+elephantsqldb-daas            IN A        10.0.7.86   ;https://www.percona.com/software/mongo-database/percona-server-for-mongodb
+firebirddb                    IN A        10.0.7.87   ;http://www.firebirdsql.org/en/about-firebird/
+opentsdb-daas                 IN A        10.0.7.88
+; vitesse Servers and tools that scale MySQL databases for the web in cloud architectures or on dedicated hardware
+;   https://github.com/youtube/vitess
+
+
+; greenplum-daas           IN A        10.0.3.3    ;http://pivotal.io/big-data/pivotal-greenplum
+; hadoop-daas              IN A        10.0.3.4
+; oozie-daas               IN A        10.0.3.5
+; pig-daas                 IN A        10.0.3.6
+; hive-daas                IN A        10.0.3.7    ; https://www.mapr.com/products/product-overview/apache-hive
+; presto-daas              IN A        10.0.3.8    ;http://www.teradata.com/Teradata-Portfolio-for-Hadoop/?repoType=1033&LangSelect=true
+; vertica-daas             IN A        10.0.3.9    ;https://my.vertica.com
+; hortonworks-daas         IN A        10.0.3.10   ;http://hortonworks.com/hadoop/hive/
+; cloudera-daas            IN A        10.0.3.11   ;http://www.cloudera.com/products/apache-hadoop.html
+; kylin-daas               IN A        10.0.3.12   ;http://www.ebaytechblog.com/2014/10/20/announcing-kylin-extreme-olap-engine-for-big-data/
+; http://parquet.apache.org
+; datastacks
+; aerospike         http://www.aerospike.com, http://www.aerospike.com/benchmark/
+
+
+
+puppet-lang                 IN A        10.0.8.2
+meteor-lang                 IN A        10.0.8.3
+php-lang                    IN A        10.0.8.4
+nodejs-lang                 IN A        10.0.8.5
+ruby-lang                   IN A        10.0.8.6
+java-lang                   IN A        10.0.8.7
+python-lang                 IN A        10.0.8.8
+erlang-lang                 IN A        10.0.8.9
+go-lang                     IN A        10.0.8.10
+; swift                     IN A        10.0.8.11
+
+
+; react-native http://facebook.github.io/react-native/
+; protocol-buffers Protocol buffers are a language-neutral, platform-neutral extensible mechanism for serializing structured data
+;   - https://developers.google.com/protocol-buffers/
+
+
+puppet-iaas                 IN A        10.0.9.2
+dchq-iaas                   IN A        10.0.9.3
+rdo-iaas                    IN A        10.0.9.4
+mirantis-iaas               IN A        10.0.9.5
+cloudforms-iaas             IN A        10.0.9.6    ; https://www.redhat.com/en/technologies/cloud-computing/cloudforms
+ldap-iaas                   IN A        10.0.9.7
+openvpn-iaas                IN A        10.0.9.8
+rancid-iaas                 IN A        10.0.9.9
+varnish-iaas                IN A        10.0.9.10
+; kuberdock - Bring dozens or even hundreds of dockerized applications to your customers, fast.
+;   https://cloudlinux.com/all-products/product-overview/kuberdock
+puppet-iot                  IN A            10.0.10.2
+tensorflow-iot              IN A        10.0.10.3   ; http://tensorflow.github.io/serving/
+spark-iot                   IN A        10.0.10.4
+;databricks https://databricks.com
+druid-iot                   IN A        10.0.10.5
+drill-iot                   IN A        10.0.10.6
+impala-iot                  IN A        10.0.10.8
+neo4j-iot                   IN A        10.0.10.9
+pipelinedb-iot              IN A        10.0.10.10   ; https://www.pipelinedb.com
+crateio-iot                 IN A        10.0.10.11   ; https://crate.io/
+cockroachdb-iot             IN A        10.0.10.12   ; https://github.com/cockroachdb/cockroach
+confluent-iot               IN A        10.0.10.14
+firebase-iot                IN A        10.0.10.15   ;' real time streaming database'
+anaconda-iot                IN A        10.0.10.16   ; https://www.continuum.io, Modern open source analytics platform powered by Python
+; https://github.com/dmlc/mxnet
+; https://cloud.google.com/vision/ image recognition
+; https://www.projectoxford.ai microsoft image recognition
+; theano-iot    http://deeplearning.net/software/theano/#
+; brillo
+;       https://developers.google.com/brillo/
+;       https://search.disconnect.me/searchTerms/serp?search=4ff6f53f-fada-4286-8000-ccb1cd5ed3e0
+; flink
+;       http://www.informationweek.com/big-data/software-platforms/hadoop-ecosystem-evolves-10-cool-big-data-projects-/d/d-id/1324420
+;       https://ci.apache.org/projects/flink/flink-docs-master/apis/streaming/libs/cep.html
+;       http://flink.apache.org/
+; mapr  http://www.cio.com/article/3041508/open-source-tools/mapr-delivers-support-for-containers-security-in-latest-hadoop-release.html
+;       http://blogs.cisco.com/datacenter/mapr-big-data-everywhere-2016
+; mxnet https://github.com/dmlc/mxnet Lightweight, Portable, Flexible Distributed/Mobile Deep Learning with Dynamic, Mutation-aware Dataflow Dep Scheduler; for Python, R, Julia, Go, Javascript
+; imagenet http://www.image-net.org
+;   ImageNet is an image database organized according to the WordNet hierarchy (currently only the nouns), in which each node of the hierarchy is depicted by hundreds and thousands of images
+; PASCAL VOC project - standardised image data sets for object class recognition
+;   http://host.robots.ox.ac.uk/pascal/VOC/
+; Google Cloud Vision, for example, offers a series of image detection services from facial and optical character recognition (text) to landmark and explicit content detection, and charges on a per-photo basis
+;   https://cloud.google.com/vision/
+; Clarifai offer computer vision APIs that help companies organize their content, filter out unsafe user-generated images
+;   https://www.clarifai.com
+; Microsoft Cognitive Services let you build apps with powerful algorithms using just a few lines of code
+;   https://www.microsoft.com/cognitive-services
+; Caffe - Caffe is a deep learning framework made with expression, speed, and modularity in mind
+;   http://caffe.berkeleyvision.org
+; Torch is a scientific computing framework with wide support for machine learning algorithms that puts GPUs first.
+;   http://torch.ch
+;
+;
+;
+;
+;
+
+puppet-os               IN A        10.0.11.2
+centos67-os             IN A        10.0.11.3
+centos72-os             IN A        10.0.11.4
+coreos-os               IN A        10.0.11.5
+atomic-os               IN A        10.0.11.6
+rhel67-os               IN A        10.0.11.7
+rhel71-os               IN A        10.0.11.8
+; http://linuxgizmos.com/zephyr-a-tiny-open-source-iot-rtos/ zephyr
+; arduino
+; RancherOS - http://rancher.com, http://rancher.com/rancher-os/
+; VMWare Photon OS - a minimalist variant of Linux that has just enough components to run containers and is intended to be more secure, less costly, and lighter than a standard Linux environment
+;   http://www.nextplatform.com/2015/04/20/virtualization-giant-vmware-takes-on-cloud-native-microservices/
+;   http://www.nextplatform.com/2016/03/21/photon-container-platform-closer-prime-time/
+
+puppet-maas             IN A        10.0.12.2
+splunk-maas             IN A        10.0.12.3
+fluentd-maas            IN A        10.0.12.4
+graylog-maas            IN A        10.0.12.5
+; https://dev.cloudwatt.com/en/blog/5-minutes-stacks-episode-fourteen-graylog.html
+nagiosxi-1-maas         IN A        10.0.12.6
+logstash-maas           IN A        10.0.12.7
+sensu-maas              IN A        10.0.12.8
+prometheus-maas         IN A        10.0.12.9
+zabbix-1-maas           IN A        10.0.12.10
+; https://dev.cloudwatt.com/en/blog/5-minutes-stacks-episode-nineteen-zabbix.html
+zenoss-maas             IN A        10.0.12.11
+riemann-maas            IN A        10.0.12.13
+smokeping-maas          IN A        10.0.12.14
+rsyslog-maas            IN A        10.0.12.15
+logio-maas              IN A        10.0.12.17  ; http://www.tecmint.com/linux-server-log-monitoring-with-log-io/
+flapjack-maas           IN A        10.0.12.18  ; http://flapjack.io/docs/1.0/usage/quickstart/
+nagiosxi-2-maas         IN A        10.0.12.19
+zabbix-2-maas           IN A        10.0.12.20
+heapster-1-maas         IN A        10.0.12.21
+heapster-2-maas         IN A        10.0.12.22
+;https://github.com/kubernetes/heapster
+;splunk
+;    cloud http://www.splunk.com/en_us/download.html
+;    splunk light http://www.splunk.com/en_us/download.html
+;    hunk http://www.splunk.com/en_us/download.html
+;    https://github.com/linkedin/dr-elephant/wiki Dr. Elephant is a performance monitoring and tuning tool for Hadoop and Spark.
+;    https://github.com/monitoringsucks/tool-repos
+; newrelic
+; papertrail
+; logentries
+; loggly
+; datadog
+; sumologic
+; pagerduty
+
+
+puppet-paas                IN A        10.0.13.2
+cloudfoundry-paas          IN A        10.0.13.3
+openshift-master-paas      IN A        10.0.13.4
+openshift-node-1-paas      IN A        10.0.13.5
+openshift-node-2-paas      IN A        10.0.13.6
+openshift-node-3-paas      IN A        10.0.13.7
+deis-paas                  IN A        10.0.13.8
+; https://www.predix.io Predix cloud based platform for industrial internet
+; helion
+; bluemix
+; cisco + cloudfoundry
+; Google Cloud Functions
+; AWS Lambda
+; Azure WebJobs
+; OpenWhisk https://developer.ibm.com/openwhisk/2016/02/18/openwhisk-radically-simplifying-the-development-process-for-small-and-agile-teams/
+; flynn.io
+; Deis - https://github.com/opdemand/deis
+; Dokku - https://github.com/progrium/dokku
+; lattice - Lattice is an open source project for running containerized workloads on a cluster. A Lattice cluster is comprised of a number of Lattice Cells (VMs that run containers) and a ‘Brain’ that monitors the Cells.
+;   http://lattice.cf/docs/
+; Neflix OSS https://netflix.github.io/
+
+
+puppet-queue                IN A        10.0.14.2
+rabbitmq-1-queue            IN A        10.0.14.3
+rabbitmq-2-queue            IN A        10.0.14.4
+rabbitmq-3-queue            IN A        10.0.14.5
+activemq-1-queue            IN A        10.0.14.6
+activemq-2-queue            IN A        10.0.14.7
+activemq-3-queue            IN A        10.0.14.8
+kafka-1-queue               IN A        10.0.14.9
+kafka-2-queue               IN A        10.0.14.10
+kafka-3-queue               IN A        10.0.14.11
+
+
+puppet-secaas               IN A        10.0.3.102
+blackarch-secaas            IN A        10.0.3.103   ;http://blackarch.org
+nessus-secaas               IN A        10.0.3.104
+snort-secaas                IN A        10.0.3.105  ; http://www.radiomagonline.com/deep-dig/0005/cacti-squid-and-snort--your-way-to-secure-networks/37733
+kali-secaas                 IN A        10.0.3.106   ;https://www.kali.org
+securityonion-secaas        IN A        10.0.3.107   ;http://security-onion-solutions.github.io/security-onion, https://github.com/Security-Onion-Solutions/security-onion/wiki/Installation
+owasp-secaas                IN A        10.0.3.108	; https://www.owasp.org/index.php/OWASP_Security_Knowledge_Framework
+beef-secaas                 IN A        10.0.3.109
+unhide-secaas               IN A        10.0.3.110
+metasploit-secaas           IN A        10.0.3.111
+openvas-secaas              IN A        10.0.3.112
+fail2ban-secaas             IN A        10.0.3.113
+backbox-secaas              IN A        10.0.3.114  ;http://wiki.backbox.org
+nmap-secaas                 IN A        10.0.3.115
+
+https://www.open-scap.org
+; https://www.twistlock.com
+; The Bro Network Security Monitor https://www.bro.org
+; logwatch - https://sourceforge.net/projects/logwatch/files/
+; https://letsencrypt.org
+; sourcefire
+; GTMetrix - https://gtmetrix.com/
+;   GTmetrix gives you insight on how well your site loads and provides actionable recommendations on how to optimize it.
+; qualsys ssl labs
+; https://anonymous-proxy-servers.net/en/software_more.html
+;http://www.whitesourcesoftware.com
+;zuul https://blog.heroku.com/archives/2016/3/2/using_netflix_zuul_to_proxy_your_microservices?c=70130000000NgRXAA0&utm_campaign=Newsletter_March_2016&utm_medium=email&utm_source=newsletter&utm_content=blog&utm_term=using_netflix_zuul_to_proxy_your_microservices
+; go-kit https://blog.heroku.com/archives/2016/2/19/microservices_in_go_using_go_kit?c=70130000000NgRXAA0&utm_campaign=Newsletter_March_2016&utm_medium=email&utm_source=newsletter&utm_content=blog&utm_term=microservices_in_go_using_go_kit
+; kontena - http://www.kontena.io
+; blaz https://github.com/amiorin/blaz  Blaz runs your scripts inside docker.
+; kube2consul A bridge between Kubernetes and Consul    https://github.com/Beldur/kube2consul
+; kubernetes ui https://github.com/kubernetes/kube-ui
+;   https://github.com/kubernetes-ui
+; photon controller - VMWARE version of Kubernetes - Distributed, multi-tenant host controller and scheduler
+;   https://vmware.github.io/photon-controller/
+;   https://github.com/vmware/photon-controller
+; twistlock - Twistlock’s technologies are built from the ground up for containers — from hardening container images in development to protecting running containers in production — everything we do in protection aims to preserve and enhance the agility and portability of your container assets.
+;   https://www.twistlock.com/demo/
+; pfsense - pfSense is an open source firewall/router computer software distribution based on FreeBSD. It is installed on a physical computer or a virtual machine to make a dedicated firewall/router for a network and is noted for its reliability
+;   http://dev.cloudwatt.com/en/blog/5-minutes-stacks-episode-twenty-five-pfsense.html
+; shinken - Shinken is an application for system and network monitoring.
+;   https://dev.cloudwatt.com/en/blog/5-minutes-stacks-episode-fifteen-shinken.html
+
+puppet-ui                IN A        10.0.4.102
+kibana-ui                IN A        10.0.4.103
+grafana-ui               IN A        10.0.4.104
+d3js-ui                  IN A        10.0.4.106
+kubedash-ui              IN A        10.0.4.107
+chronograf-ui            IN A        10.0.4.108
+;https://github.com/kubernetes/kubedash
+
+puppet-saas              IN A        10.0.5.102
+mailscanner-saas         IN A        10.0.5.103   ;https://www.mailscanner.info
+scrolloutf1-saas         IN A        10.0.5.104   ;http://www.scrolloutf1.com
+ciphermail-saas          IN A        10.0.5.105   ;https://www.ciphermail.com
+apache-saas              IN A        10.0.5.106
+nginx-saas               IN A        10.0.5.107
+tomcat-saas              IN A        10.0.5.108
+jboss-saas               IN A        10.0.5.109
+haproxy-saas             IN A        10.0.5.110
+vsftpd-saas              IN A        10.0.5.111
+postfix-saas             IN A        10.0.5.112
+hystrix-saas             IN A        10.0.5.113  ;https://github.com/Netflix/Hystrix
+nats-saas                IN A        10.0.5.114  ;http://nats.io/documentation/server/gnatsd-intro/
+thrift-saas              IN A        10.0.5.115  ;https://thrift.apache.org/docs/features
+grpc-saas                IN A        10.0.5.116  ;http://www.grpc.io/docs/
+finagle-saas             IN A        10.0.5.117  ;https://twitter.github.io/finagle/
+; crawler4j https://github.com/yasserg/crawler4j
+
+puppet-devops            IN A        10.0.6.102
+ansibletower-devops      IN A        10.0.6.103
+; https://www.ansible.com/webinar-on-demand-ansible-and-network
+pxe-devops               IN A        10.0.6.104
+tftp-devops              IN A        10.0.6.105
+cobbler-devops           IN A        10.0.6.106
+
+; nuxeo  https://connect.nuxeo.com/register/#/
+; cloudaware    http://www.cloudaware.com/
+; rightscale
+; servicenow
+; Hygieia   https://github.com/capitalone/Hygieia
+
+puppet-objaas             IN A        10.0.7.102
+riak-objaas                IN A        10.0.7.103
+glusterfs-naas           IN A        10.0.7.104
+flocker-naas             IN A        10.0.7.105
+ceph-naas                IN A        10.0.7.106
+minio-naas               IN A        10.0.7.107   ;https://www.minio.io/
+portworx-naas            IN A        10.0.7.108   ;https://github.com/portworx
+datawise-naas            IN A        10.0.7.109   ;http://www.datawise.io/project-6.html
+; https://www.redhat.com/en/technologies/storage/gluster rhatglusterfs
+; OpenDaylight: Open Source SDN Platform
+;   https://www.opendaylight.org
+; OPNFV is a new open source project focused on accelerating NFV's
+;   https://www.opnfv.org
+; https://github.com/OpenSnaproute
+puppet-naas              IN A        10.0.8.102
+weaveworks-naas          IN A        10.0.8.103
+openswitch-naas          IN A        10.0.8.104   ;http://networkstatic.net/open-vswitch-on-virtualbox/
+                                                 ;https://www.redhat.com/en/about/videos/software-defined-networking-and-more-red-hat-atomic-enterprise-platform
+calico-naas              IN A        10.0.8.105   ;http://www.projectcalico.org/getting-started/
+cumulus-naas             IN A        10.0.8.106   ;https://cumulusnetworks.com/cumulus-linux/overview/
+rancid-naas              IN A        10.0.8.107   ;http://www.shrubbery.net/rancid/
+datawire-naas            IN A        10.0.8.108   ;https://github.com/datawire/datawire-connect
+traefik-naas             IN A        10.0.8.109   ;https://github.com/emilevauge/traefik
+; flannel https://github.com/coreos/flannel
+
+; puppet-nmaas
+; opennms           http://www.networkmanagementsoftware.com/network-management-software-smackdown/
+; solarwinds        http://www.networkmanagementsoftware.com/network-management-software-smackdown/
+; whatsup gold      http://www.networkmanagementsoftware.com/network-management-software-smackdown/
+; intermapper       http://www.networkmanagementsoftware.com/network-management-software-smackdown/
+; manageengine      http://www.networkmanagementsoftware.com/network-management-software-smackdown/
+; appneta           http://www.networkmanagementsoftware.com/network-management-software-smackdown/
+; tcpdump           http://jvns.ca/blog/2016/03/16/tcpdump-is-amazing/
+
+
+; here want to load balance via dns
+; proxy via haproxy which will load balance
+; dns.bionic.labs DNS roundrobin to dns-1 and dns-2
+; dns-lb-1.bionic.labs proxies to dns-1 and dns-2
+; hmm is different for dns (no proxy), squid proxy
+puppet-corp                 IN A        10.0.10.102
+dns-1-corp                  IN A        10.0.10.103
+dns-2-corp                  IN A        10.0.10.104
+squid-corp                  IN A        10.0.10.105
+squid-corp                  IN A        10.0.10.106
+squid-1-corp                IN A        10.0.10.105
+squid-2-corp                IN A        10.0.10.106
+ntp-1-corp                  IN A        10.0.10.107
+ntp-2-corp                  IN A        10.0.10.108
+jenkins-1-corp              IN A        10.0.10.109
+jenkins-2-corp              IN A        10.0.10.110
+owncloud-1-corp             IN A        10.0.10.111
+owncloud-2-corp             IN A        10.0.10.112
+mattermost-1-corp           IN A        10.0.10.113
+mattermost-2-corp           IN A        10.0.10.114
+jira-1-corp                 IN A        10.0.10.115
+jira-2-corp                 IN A        10.0.10.116
+confluence-1-corp           IN A        10.0.10.117
+confluence-2-corp           IN A        10.0.10.118
+gitlab-corp                 IN A        10.0.10.119
+;  https://dev.cloudwatt.com/en/blog/5-minutes-stacks-episode-seven-gitlab.html
+stash-corp                  IN A        10.0.10.120
+swagger-corp                IN A        10.0.10.121
+
+
+; vault-corp https://www.vaultproject.io
+; dns-lb, dns-lb-1, dns-lb-2
+; dns, dns-1, dns-2
+
+
+puppet-blockchain           IN A        10.0.11.102
+multichain-blockchain       IN A        10.0.11.103   ; http://www.multichain.com/
+openchain-blockchain        IN A        10.0.11.104   ; https://www.openchain.org/
+blockstack-blockchain       IN A        10.0.11.105   ; https://blockstack.org/
+myblockchain-blockchain     IN A        10.0.11.106   ; https://www.myblockchain.xyz/
+
+
+puppet-irc                  IN A        10.0.12.102
+shout-irc                   IN A        10.0.12.103   ; http://shout-irc.com/
+; hubl.in - Hubl.in is using WebRTC technology to provide its incredible video conference experience
+;  	https://hubl.in
+; mattermost - Mattermost is an open source, self-hosted Slack-alternative
+;	http://www.mattermost.org
+; rocket.chat - From group messages and video calls all the way to helpdesk killer features. Our goal is to become the number one cross-platform open source chat solution.
+;	  https://rocket.chat
+;   100-day Challenge #081: Running Rocket.Chat on Cloud Foundry
+;   https://www.cloudfoundry.org/100-day-challenge-081-running-rocket-chat-cloud-foundry/
+; friends - http://moose-team.github.io/friends/
+; let-schat https://github.com/sdelements/lets-chat
+
+
+
+; tracing
+; htrace - http://incubator.apache.org/projects/htrace.html
+; zipkin - http://twitter.github.io/zipkin/Quickstart.html
+; opensource-tracing - http://opentracing.io/apis/
+; dapper - http://research.google.com/pubs/pub36356.html
+
+
+; tsdb's
+; http://fg-arc.gi.de/fileadmin/architekturen2014/Goldschmidt_-_The_Automation_Cloud.pdf
+; KairosDB
+; http://kairosdb.github.io
+; graphite
+; prometheus
+; influxdb
+; opentsdb
+
+; puppet-sraas  service routing as a service
+; flux Weave Flux provides a decentralized service router that makes the health and performance of microservices visible.
+;   Request a Demo https://www.weave.works/products/weave-flux/
+
+; puppet-cms
+; ghost https://ghost.org - A publishing platform for professional blogger
+;   good way to learn emberjs and node
+
+; puppet-iamaas - identity access management as a service
+;   http://www.vmware.com/files/pdf/cloudnative/vmw-lightwave-faq.pdf
+;   http://vmware.github.io/lightwave/
+
+; Data-as-a-Service
+; Analytics-as-a-Service
+; Insights-as-a-Service
+
+
+; ghost -  The Ghost project is a simple but powerfull blog engine. It is based on Node.js
+;   https://dev.cloudwatt.com/en/blog/5-minutes-stacks-episode-five-ghost.html
+
+; etherpad -  Etherpad is a real time collaborative text editor.
+;   https://dev.cloudwatt.com/en/blog/5-minutes-stacks-episode-six-etherpad.html
+
+; cozycloud - Cozycloud your free personal cloud server. Unlike other personal cloud , Cozy focuses on applications and collaboration applications around your personal data.
+;   https://dev.cloudwatt.com/en/blog/5-minutes-stacks-episode-twenty-four-cozycloud.html

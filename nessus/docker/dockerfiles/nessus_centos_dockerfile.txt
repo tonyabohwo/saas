@@ -1,0 +1,19 @@
+FROM registry.bionic.labs:5000/centos:7
+MAINTAINER captain@bionic.labs
+
+#update yum and install
+RUN yum update -y && yum install glibc zlib
+
+# copy install file, make sure you have install file to copy
+COPY Nessus-6.3.6-es6.x86_64.rpm /
+
+#install nessus
+RUN rpm -ivh Nessus-6.3.6-es6.x86_64.rpm
+
+EXPOSE 8834
+CMD /opt/nessus/sbin/nessus-service
+
+# To run it you do docker run -p 80:8834 and go to web https://container_id:80/
+
+
+

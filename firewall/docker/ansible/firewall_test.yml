@@ -1,0 +1,26 @@
+---
+- hosts: rackspace
+  tasks:
+  - name: Start iptables
+    shell: service iptables start
+    sudo: yes
+
+  - name: Check status of iptables
+    shell: service iptables status
+    sudo: yes
+    
+  - name: Start iptables
+    shell: service iptables stop
+    sudo: yes
+
+  - name: Check status of iptables
+    shell: service iptables start
+    sudo: yes
+    
+  - name: Restart iptables
+    shell: service iptables start
+    sudo: yes
+
+  - name: Curl httpd to see if it returns web info since the port is open(Please change ip to your machine's ip)
+    shell: curl http://54.188.214.230/
+    sudo: yes

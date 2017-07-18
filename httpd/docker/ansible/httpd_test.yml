@@ -1,0 +1,14 @@
+---
+- hosts: rackspace
+  tasks:
+  - name: Starting httpd
+    shell: service httpd start
+    sudo: yes
+    
+  - name: Check httpd status
+    shell: service httpd status
+    sudo: yes
+    
+  - name: Curl httpd to see if it returns web info (Please change ip to your machine's ip)
+    shell: curl http://104.239.166.38/
+    sudo: yes

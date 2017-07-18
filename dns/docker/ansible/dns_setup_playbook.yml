@@ -1,0 +1,118 @@
+---
+- hosts: rackspace
+  tasks:
+  - name: Install bind packages
+    shell: yum install bind* -y
+    register: bind_output
+    sudo: yes
+
+  - name: what got registered
+    debug: var=bind_output
+
+  - name: return code
+    debug: msg="return code was {{ bind_output['rc'] }}"
+
+  - name: Add host name in /etc/hosts
+    shell: sudo echo "104.130.170.135 dns1.captain.com" >> /etc/hosts 
+    register: hosts_output
+    sudo: yes
+
+  - name: what got registered
+    debug: var=hosts_output
+
+  - name: return code
+    debug: msg="return code was {{ hosts_output['rc'] }}"
+  
+  - name: Remove /etc/resolv.conf file
+    command: chdir=/etc/ rm -rf resolv.conf
+    register: resolvDel_output
+    sudo: yes
+
+  - name: what got registered
+    debug: var=resolvDel_output
+
+  - name: return code
+    debug: msg="return code was {{ resolvDel_output['rc'] }}"
+
+  - name: Add server to /etc/resolv.conf file
+    shell: sudo echo "nameserver 104.130.170.135" >> /etc/resolv.conf 
+    register: resolv_output
+    sudo: yes
+
+  - name: what got registered
+    debug: var=resolv_output
+
+  - name: return code
+    debug: msg="return code was {{ resolv_output['rc'] }}"
+    
+  - name: remove named.conf so that we can copy new file in
+    command: chdir=/etc/ rm -rf named.conf
+    register: named_output
+    ignore_errors: True
+    
+  - name: what got registered
+    debug: var=named_output
+
+  - name: Copy named.txt into named.conf
+    copy: src=/root/named.txt dest=/etc/named.conf
+    register: named_output
+    ignore_errors: True
+    
+  - name: what got registered
+    debug: var=named_output
+
+  - name: Remove named.rfc1912.zones
+    command: chdir=/etc/ rm -rf named.rfc1912.zones
+    register: rfc1912.zones_output
+    ignore_errors: True
+    
+  - name: what got registered
+    debug: var=rfc1912.zones_output
+    
+  - name: Copy named.rfc1912.zones.txt into named.rfc1912.zones
+    copy: src=/root/named.rfc1912.zones.txt dest=/etc/named.rfc1912.zones
+    register: zones_output
+    ignore_errors: True
+    
+  - name: what got registered
+    debug: var=zones_output
+  
+  - name: Copy forward.zone.txt to forward.zone
+    copy: src=/root/forward.zone.txt dest=/var/named/forward.zone
+    register: forward_output
+    sudo: yes
+
+  - name: what got registered
+    debug: var=forward_output
+
+  - name: Copy reverse.zone.txt to reverse.zone
+    copy: src=/root/reverse.zone.txt dest=/var/named/reverse.zone
+    register: reverse_output
+    sudo: yes
+
+  - name: what got registered
+    debug: var=reverse_output
+
+  - name: changing groups  for forward.zone
+    shell: chgrp named /var/named/forward.zone
+    register: forwardgrp_output
+    sudo: yes
+
+  - name: what got registered
+    debug: var=forwardgrp_output
+
+  - name: return code
+    debug: msg="return code was {{ forwardgrp_output['rc'] }}"
+
+  - name: changing groups for reverse.zones
+    shell: chgrp named /var/named/reverse.zone
+    register: reversegrp_output
+    sudo: yes
+
+  - name: what got registered
+    debug: var=reversegrp_output
+
+  - name: return code
+    debug: msg="return code was {{ reversegrp_output['rc'] }}"
+
+

@@ -1,0 +1,44 @@
+---
+- hosts: web
+  tasks:
+  - name: update yum
+    shell: yum update -y
+    register: yum_output
+    sudo: yes
+
+  - name: what got registered
+    debug: var=yum_output
+
+  - name: return code
+    debug: msg="return code was {{ yum_output['rc'] }}"
+
+
+  - name: Install fail2ban
+    shell: yum install fail2ban -y
+    register: fail2ban_output
+    sudo: yes
+
+  - name: what got registered
+    debug: var=fail2ban_output
+
+  - name: return code
+    debug: msg="return code was {{ fail2ban_output['rc'] }}"
+
+  - name: Copy jail.local to /etc/fail2ban/jail.local
+    copy: src=/jail.local dest=/etc/fail2ban/jail.local
+    register: local_output
+    sudo: yes
+
+  - name: what got registered
+    debug: var=local_output
+
+  - name: start fail2ban
+    shell: service fail2ban restart
+    register: fail2banStart_output
+    sudo: yes
+
+  - name: what got registered
+    debug: var=fail2banStart_output
+
+  - name: return code
+    debug: msg="return code was {{ fail2banStart_output['rc'] }}"

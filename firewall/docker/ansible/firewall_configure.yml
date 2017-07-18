@@ -1,0 +1,59 @@
+---
+- hosts: rackspace
+  tasks:
+  - name: Starting httpd
+    shell: echo "# Firewall configuration written by system-config-firewall" >> /etc/sysconfig/iptables
+    sudo: yes
+    
+  - name: Check httpd status
+    shell: echo "# Manual customization of this file is not recommended "  >> /etc/sysconfig/iptables
+    sudo: yes
+    
+  - name: Curl httpd to see if it returns web info (Please change ip to your machine's ip)
+    shell: echo "*filter"  >> /etc/sysconfig/iptables
+    sudo: yes
+
+  - name: Starting httpd
+    shell: echo ":INPUT ACCEPT [0:0]"  >> /etc/sysconfig/iptables
+    sudo: yes
+    
+  - name: Check httpd status
+    shell: echo ":INPUT ACCEPT [0:0]"  >> /etc/sysconfig/iptables
+    sudo: yes
+    
+  - name: Curl httpd to see if it returns web info (Please change ip to your machine's ip)
+    shell: echo "-A INPUT -m state --state ESTABLISHED,RELATED -j ACCEPT"  >> /etc/sysconfig/iptables
+    sudo: yes
+
+  - name: Starting httpd
+    shell: echo "-A INPUT -p icmp -j ACCEPT"  >> /etc/sysconfig/iptables
+    sudo: yes
+    
+  - name: Check httpd status
+    shell: echo "-A INPUT -i lo -j ACCEPT"  >> /etc/sysconfig/iptables
+    sudo: yes
+    
+  - name: Curl httpd to see if it returns web info (Please change ip to your machine's ip)
+    shell: echo "-A INPUT -m state --state NEW -m tcp -p tcp --dport 22 -j ACCEPT"  >> /etc/sysconfig/iptables
+    sudo: yes
+
+  - name: Check httpd status
+    shell: echo "-A INPUT -j REJECT --reject-with icmp-host-prohibited"  >> /etc/sysconfig/iptables
+    sudo: yes
+    
+  - name: Curl httpd to see if it returns web info (Please change ip to your machine's ip)
+    shell: echo "-A FORWARD -j REJECT --reject-with icmp-host-prohibited"  >> /etc/sysconfig/iptables
+    sudo: yes
+
+  - name: Check httpd status
+    shell: echo "-A INPUT -m state --state NEW -m tcp -p tcp --dport 80 -j ACCEPT"  >> /etc/sysconfig/iptables
+    sudo: yes
+    
+  - name: Curl httpd to see if it returns web info (Please change ip to your machine's ip)
+    shell: echo "-A INPUT -m state --state NEW -m tcp -p tcp --dport 3306 -j ACCEPT"  >> /etc/sysconfig/iptables
+    sudo: yes
+    
+  - name: Check httpd status
+    shell: echo "COMMIT"  >> /etc/sysconfig/iptables
+    sudo: yes
+    

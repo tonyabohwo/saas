@@ -1,0 +1,16 @@
+
+FROM registry.bionic.labs:5000/centos:7
+MAINTAINER captain@bionic.labs
+
+RUN yum update -y  && yum install wget -y
+RUN yum install tar -y && yum install sudo -y
+RUN yum -y clean all
+RUN sed 's/Defaults    requiretty/#Defaults    requiretty/' </etc/sudoers> temp_file
+RUN mv temp_file /etc/sudoers
+ADD confluence.sh /etc/
+RUN chmod a+x /etc/confluence.sh
+RUN sudo ./etc/confluence.sh
+EXPOSE 8090
+CMD ["/usr/local/Confluence/bin/start-confluence.sh", "-fg"]
+
+

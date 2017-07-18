@@ -1,0 +1,12 @@
+---
+- hosts: rackspace
+  tasks:
+  - name: Install firewall
+    shell: yum install iptables -y
+    sudo: yes
+    
+  - name: Check iptables installed package and Version
+    shell: sudo rpm -qa | grep iptables
+    sudo: yes
+    
+    

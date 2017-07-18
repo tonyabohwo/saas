@@ -1,0 +1,11 @@
+
+
+$TTL 1D
+@ IN SOA dns1.captain.com. root.dns1.captain.com. (
+					0	; serial
+					1D	; refresh
+					1H	; retry
+					1W	; expire
+					3H )	; minimum
+	    IN NS   dns1.captain.com.
+dns1    IN A    104.130.3.62
