@@ -1,0 +1,37 @@
+#!/bin/bash
+
+#To check if nmap installed
+nmap localhost
+echo $?
+
+# To get info about remote host ports and OS detection
+nmap -sS -P0 -sV -O 10.231.37.157
+
+
+# Scan ping
+nmap -sP 10.231.37.157
+
+#IP protocol scan
+nmap -sO 10.231.37.157
+
+# To scan for open ports
+nmap -p - 10.231.37.157
+
+
+#Port scan
+nmap -p 22,80,443,110 162.242.228.32
+
+
+# Scan OS
+nmap -O --osscan-guess 10.231.37.157
+
+# Scan entire subnet
+nmap 10.231.37.157/24
+
+
+# TCP SYNC Scan
+nmap -sS 162.242.228.32
+
+
+# UPD scan
+nmap -sU 162.242.228.32

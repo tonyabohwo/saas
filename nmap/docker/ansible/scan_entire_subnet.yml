@@ -1,0 +1,8 @@
+---
+- hosts: rackspace
+  tasks:
+  - name: scan_entire_subnet.sh (Make sure the ip you are scanning is that of the target machine)
+    shell: time nmap 104.239.175.60
+    sudo: yes
+    
+ 

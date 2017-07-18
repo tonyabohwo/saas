@@ -1,0 +1,7 @@
+---
+- hosts: rackspace
+  tasks:
+  - name: Scan for open ports
+    shell: time nmap localhost
+    sudo: yes
+    

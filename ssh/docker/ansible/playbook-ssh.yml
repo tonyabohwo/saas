@@ -1,0 +1,68 @@
+---
+- hosts: web
+  tasks:
+  - name: Uncomment Protocol 2
+    shell: sed 's/#Protocol 2/Protocol 2/' </etc/ssh/sshd_config> temp_file
+    register: protocol2_output
+    sudo: yes
+
+  - name: what got registered
+    debug: var=protocol2_output
+
+  - name: return code
+    debug: msg="return code was {{ protocol2_output['rc'] }}"
+
+  - name: Protocol 2 temp_file
+    shell: mv temp_file /etc/ssh/sshd_config
+    register: ProtocolTmp_output
+    sudo: yes
+
+  - name: what got registered
+    debug: var=ProtocolTmp_output
+
+  - name: return code
+    debug: msg="return code was {{ ProtocolTmp_output['rc'] }}"
+
+  - name: AllowUsers - You put the users you want to allow here
+    shell: echo "AllowUsers root captain" >> /etc/ssh/sshd_config
+    register: AllowUsers_output
+    sudo: yes
+
+  - name: what got registered
+    debug: var=AllowUsers_output
+
+  - name: return code
+    debug: msg="return code was {{ AllowUsers_output['rc'] }}"
+
+  - name: Use TCP Wrapper - We can set the IPs we want to allow here
+    shell: echo "sshd ":" 10.0.1.7" >> /etc/hosts.allow
+    register: TCPWrapper_output
+    sudo: yes
+
+  - name: what got registered
+    debug: var=TCPWrapper_output
+
+  - name: return code
+    debug: msg="return code was {{ TCPWrapper_output['rc'] }}"
+
+  - name: Disable root login
+    shell: sed 's/#PermitRootLogin yes/PermitRootLogin no/' </etc/ssh/sshd_config> temp_file
+    register: root_output
+    sudo: yes
+
+  - name: what got registered
+    debug: var=root_output
+
+  - name: return code
+    debug: msg="return code was {{ root_output['rc'] }}"
+
+  - name: ssh-config
+    shell: mv temp_file /etc/ssh/sshd_config
+    register: RootTmp_output
+    sudo: yes
+
+  - name: what got registered
+    debug: var=RootTmp_output
+
+  - name: return code
+    debug: msg="return code was {{ RootTmp_output['rc'] }}"

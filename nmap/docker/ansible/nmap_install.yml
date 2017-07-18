@@ -1,0 +1,6 @@
+---
+- hosts: rackspace
+  tasks:
+  - name: Install nmap port scanning
+    shell: yum install nmap -y
+    sudo: yes

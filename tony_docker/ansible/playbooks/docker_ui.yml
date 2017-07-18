@@ -1,0 +1,17 @@
+---
+- hosts: rackspace
+  tasks:
+  - name:  Dokcer Ui
+    shell: docker run -d -p 9000:9000 --privileged -v /var/run/docker.sock:/var/run/docker.sock dockerui/dockerui
+    register: privileged_output
+    sudo: yes
+    
+  - name: what got registered
+    debug: var=privileged_output
+
+  - name: return code
+    debug: msg="return code was {{ privileged_output['rc'] }}"
+    
+    
+    
+
