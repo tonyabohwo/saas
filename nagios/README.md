@@ -34,7 +34,9 @@ http://ip-address/nagiosxi
 You might hit an error saying "NSP: Sorry Dave, I can’t let you do that"
 
 CAUSE/FIX
+
 The problem was due to the user's browser caching older versions of the XI javascript code. In order to clear the cache and prevent this from happening, you need to clear your browser's cache. This is typically done (in Firefox) by holding down the shift key and clicking reload.
 
 My Way
+
 I just used Chrome and it opened fine
